@@ -1,16 +1,13 @@
 import React, { useState } from 'react'
+import WrapperHoc from "./WrapHOC"
 
-export default function LikePost() {
+function LikePost({counter,handleCounter}) {
 
-  const [likePostCounter, setPostCounter] = useState(0);
-
-  const handlePostCount = ()=>{
-    setPostCounter(likePostCounter+1);
-  }
-
+  
   return (
     <div>
-      <button onClick={handlePostCount}>Like Post {likePostCounter}</button>
+      <button onClick={handleCounter}>Like Post {counter}</button>
     </div>
   )
 }
+export default WrapperHoc(LikePost);
