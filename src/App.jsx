@@ -1,7 +1,7 @@
 import './App.css';
-import LikeImage from './components/LikeImage';
-import LikePost from './components/LikePost';
-// import Wrapper from './components/Wrapper';
+import LikeImage from './components/LikeImageHOC';
+import LikePost from './components/LikePostHOC';
+import Wrapper from './components/Wrapper';
 function App() {
   return (
     <div>

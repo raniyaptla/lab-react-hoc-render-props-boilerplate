@@ -1,12 +1,8 @@
-import React, { useState } from 'react'
-import WrapperHoc from "./WrapHOC"
- function LikeImage({counter,handleCounter}) {
+export default function LikeImage(props) {
 
-  
-  return (
-    <div>
-      <button onClick={handleCounter}>Like Image {counter}</button>
-    </div>
-  )
-}
-export default WrapperHoc(LikeImage);
+    return (
+      <div>
+        <button onClick={props.handleLikeImageCount}>Like Imagee {props.likeImageCounter}</button>
+      </div>
+    )
+  }

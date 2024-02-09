@@ -1,9 +1,8 @@
-import React from 'react'
-import  { useState } from 'react'
+import React, { useState } from 'react'
 
-function Wrapper(Component) {
- 
-    const [counter, setCounter] = useState(0);
+export default function Wrapper(props) {
+
+  const [counter, setCounter] = useState(0);
 
   const handleIncreament = ()=>{
     setCounter(counter+1);
@@ -11,11 +10,7 @@ function Wrapper(Component) {
 
   return (
     <div>
-      {Component.render(counter, handleIncreament)}
-    </div>
-  )
-
- }
-
-
-export default Wrapper;
+      {props.render(counter, handleIncreament)}
+    </div>
+  )
+}
